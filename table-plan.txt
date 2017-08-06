@@ -1,0 +1,32 @@
+user
+  *user_id  user_name email password　status version created modified
+
+restaurant
+  *restaurant_id restaurant_name address phone_num budget version created modified
+（average_evaluationはブラウザで出力する直前に計算してください）
+business-hours
+  *business_hours_id restaurant_id day_of_the_week open close version created modified
+closest_station
+  *closest_station_id restaurant_id station_name version created
+keywords
+  restaurant_id keyword version created
+
+review
+  user_id restaurant_id evaluation budget comment created modified
+favorite
+  user_id restaurant_id created
+pictures
+  *picture_id restaurant_id file_name scene　comment created
+
+キーは別に一時的なテーブルを別に作るような感じ
+
+
+
+パスワードを忘れた場合の対処は？（メアド登録がないと出来ない）
+店舗登録時の重複チェックは？
+店舗編集時のデータロスについて（人の登録内容を勝手に変えれてよいのか？）
+店舗情報に住所、電話番号、営業時間、メニューが無い（具体的に）
+写真投稿機能のシーンは誰が登録・編集・削除を行うのか？
+（具体的に）
+検索機能はもう少し具体的な書き方が良い（評価点の場合、4.1点等があるが1点毎の選択式なのかFrom-Toによる検索なのか）
+店舗お気に入り機能は店舗一覧とは別画面？
