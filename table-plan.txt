@@ -1,22 +1,93 @@
 user
-  *user_id  user_name email password　status version created modified
+  *user_id
+  user_name
+  email
+  password
+  status 一般or管理
+  version　同時処理対策
+  created
+  modified
 
 restaurant
-  *restaurant_id restaurant_name address phone_num budget version created modified
-（average_evaluationはブラウザで出力する直前に計算してください）
-business-hours
-  *business_hours_id restaurant_id day_of_the_week open close version created modified
+  *restaurant_id
+  restaurant_name
+  address
+  phone_num
+  ave_budget　バッチ
+  ave_evaluation バッチ
+  homepage
+  favorite
+  register_user
+  version
+  created
+  modified
+
+menu
+  *menu_id
+  restaurant_id
+  name
+  price
+  created
+  modified
+
+nice
+  menu_id
+  restaurant_id
+  user_id
+  created
+
+holiday
+  *holiday_id
+  restaurant_id
+  day_of_the_week
+  start
+  end
+  version
+  created
+  modified
+
 closest_station
-  *closest_station_id restaurant_id station_name version created
+  restaurant_id
+  station_name
+  version
+  created
+
 keywords
-  restaurant_id keyword version created
+  restaurant_id
+  keyword
+  created
+
+history
+  *history_id
+  user_id
+  edit
+  content
+  edit_user
 
 review
-  user_id restaurant_id evaluation budget comment created modified
+  user_id
+  restaurant_id
+  user_name
+  evaluation
+  budget
+  comment
+  created
+  modified
+
 favorite
-  user_id restaurant_id created
+  user_id
+  restaurant_id
+  created
+
 pictures
-  *picture_id restaurant_id file_name scene　comment created
+  *picture_id
+  user_id
+  restaurant_id
+  user_name
+  file_name
+  scene
+  comment
+  created
 
 キーは別に一時的なテーブルを別に作るような感じ
 
