@@ -1,0 +1,103 @@
+user
+  *user_id
+  user_name
+  email
+  password
+  status 一般or管理
+  version　同時処理対策
+  created
+  modified
+
+restaurant
+  *restaurant_id
+  restaurant_name
+  address
+  phone_num
+  ave_budget　バッチ
+  ave_evaluation バッチ
+  homepage
+  favorite
+  register_user
+  version
+  created
+  modified
+
+menu
+  *menu_id
+  restaurant_id
+  name
+  price
+  created
+  modified
+
+nice
+  menu_id
+  restaurant_id
+  user_id
+  created
+
+holiday
+  *holiday_id
+  restaurant_id
+  day_of_the_week
+  start
+  end
+  version
+  created
+  modified
+
+closest_station
+  restaurant_id
+  station_name
+  version
+  created
+
+keywords
+  restaurant_id
+  keyword
+  created
+
+history
+  *history_id
+  user_id
+  edit
+  content
+  edit_user
+
+review
+  user_id
+  restaurant_id
+  user_name
+  evaluation
+  budget
+  comment
+  created
+  modified
+
+favorite
+  user_id
+  restaurant_id
+  created
+
+pictures
+  *picture_id
+  user_id
+  restaurant_id
+  user_name
+  file_name
+  scene
+  comment
+  created
+
+キーは別に一時的なテーブルを別に作るような感じ
+
+
+
+パスワードを忘れた場合の対処は？（メアド登録がないと出来ない）
+店舗登録時の重複チェックは？
+店舗編集時のデータロスについて（人の登録内容を勝手に変えれてよいのか？）
+店舗情報に住所、電話番号、営業時間、メニューが無い（具体的に）
+写真投稿機能のシーンは誰が登録・編集・削除を行うのか？
+（具体的に）
+検索機能はもう少し具体的な書き方が良い（評価点の場合、4.1点等があるが1点毎の選択式なのかFrom-Toによる検索なのか）
+店舗お気に入り機能は店舗一覧とは別画面？
